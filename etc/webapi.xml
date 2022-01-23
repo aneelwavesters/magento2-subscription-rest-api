@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/wavesters-subscription/addsubscription" method="POST">
+		<service class="Wavesters\Subscription\Api\AddSubscriptionManagementInterface" method="postAddSubscription"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/wavesters-subscription/getsubscription" method="GET">
+		<service class="Wavesters\Subscription\Api\GetSubscriptionManagementInterface" method="getGetSubscription"/>
+		<resources>
+			<resource ref="anonymous"/>
+		</resources>
+	</route>
+	<route url="/V1/wavesters-subscription/subscription" method="POST">
+		<service class="Wavesters\Subscription\Api\SubscriptionRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Wavesters_Subscription::Subscription_save"/>
+		</resources>
+	</route>
+	<route url="/V1/wavesters-subscription/subscription/search" method="GET">
+		<service class="Wavesters\Subscription\Api\SubscriptionRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="Wavesters_Subscription::Subscription_view"/>
+		</resources>
+	</route>
+	<route url="/V1/wavesters-subscription/subscription/:subscriptionId" method="GET">
+		<service class="Wavesters\Subscription\Api\SubscriptionRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="Wavesters_Subscription::Subscription_view"/>
+		</resources>
+	</route>
+	<route url="/V1/wavesters-subscription/subscription/:subscriptionId" method="PUT">
+		<service class="Wavesters\Subscription\Api\SubscriptionRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="Wavesters_Subscription::Subscription_update"/>
+		</resources>
+	</route>
+	<route url="/V1/wavesters-subscription/subscription/:subscriptionId" method="DELETE">
+		<service class="Wavesters\Subscription\Api\SubscriptionRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="Wavesters_Subscription::Subscription_delete"/>
+		</resources>
+	</route>
+</routes>

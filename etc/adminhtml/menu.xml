@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Wavesters::top_level" title="Wavesters" module="Wavesters_Subscription" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Wavesters_Subscription::wavesters_subscription_subscription" title="Subscription" module="Wavesters_Subscription" sortOrder="9999" resource="Magento_Backend::content" parent="Wavesters::top_level" action="wavesters_subscription/subscription/index"/>
+	</menu>
+</config>

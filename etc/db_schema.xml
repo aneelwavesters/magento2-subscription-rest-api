@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="wavesters_subscription_subscription" resource="default" engine="innodb" comment="wavesters_subscription_subscription Table">
+		<column xsi:type="int" name="subscription_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="subscription_id"/>
+		</constraint>
+		<column name="membership_plan_id" nullable="true" xsi:type="text" comment="membership_plan_id"/>
+		<column name="user_id" nullable="true" xsi:type="text" comment="user_id"/>
+		<column name="amount" nullable="true" xsi:type="text" comment="amount"/>
+		<column name="transaction_id" nullable="true" xsi:type="text" comment="transaction_id"/>
+		<column name="currency_type" nullable="true" xsi:type="text" comment="currency_type"/>
+		<column name="first_name" nullable="true" xsi:type="text" comment="first_name"/>
+		<column name="last_name" nullable="true" xsi:type="text" comment="last_name"/>
+		<column name="email" nullable="true" xsi:type="text" comment="email"/>
+		<column name="subscription_type" nullable="true" xsi:type="text" comment="subscription_type"/>
+		<column name="created_date" nullable="true" xsi:type="timestamp" comment="created_date"/>
+		<column name="updated_date" nullable="true" xsi:type="timestamp" comment="updated_date"/>
+		<column name="is_active" nullable="true" xsi:type="smallint" comment="is_active" identity="false"/>
+	</table>
+</schema>
